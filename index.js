@@ -447,7 +447,8 @@ async function starts() {
 					case 'nsfwblowjob':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desativado* ❌')
-							res = await fetchJson(`https://nekos.life/api/v2/img/blowjob`, {method: 'get'})
+							res = await fetchJson(`https://nekos.life/api/v2/img/Random_hentai_gif
+`, {method: 'get'})
 							buffer = await getBuffer(res.result)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Você que pediu'})
 						} catch (e) {
