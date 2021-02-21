@@ -444,19 +444,6 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwblowjob':
-						try {
-							if (!isNsfw) return reply('❌ *NSFW Desativado* ❌')
-							   let img = hmtai.nsfw.nsfwNeko();
-    return message.channel.send({file: [{ attachment: img, name: `NSFW${img.slice(-5)}` }]});
-  }
-});
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Você que pediu'})
-						} catch (e) {
-							console.log(`Error :`, color(e,'red'))
-							reply('❌ *ERROR* ❌')
-						}
-						break
 					case 'nsfwneko':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desativado* ❌')
