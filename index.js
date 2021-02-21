@@ -447,9 +447,10 @@ async function starts() {
 					case 'nsfwblowjob':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desativado* ❌')
-							res = await fetchJson(`https://nekos.life/api/v2/img/Random_hentai_gif
-`, {method: 'get'})
-							buffer = await getBuffer(res.result)
+							   let img = hmtai.nsfw.nsfwNeko();
+    return message.channel.send({file: [{ attachment: img, name: `NSFW${img.slice(-5)}` }]});
+  }
+});
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Você que pediu'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
